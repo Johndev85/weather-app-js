@@ -1,6 +1,6 @@
 # weather-app-js
 
-![weather app image](./images/screenshot.png))
+![weather app image](./images/screenshot.png)
 
 **API Deploy:**
 
