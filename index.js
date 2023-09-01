@@ -3,12 +3,20 @@ const search = document.querySelector(".search-box button")
 const weatherBox = document.querySelector(".weather-box")
 const weatherDetails = document.querySelector(".weather-details")
 const error404 = document.querySelector(".not-found")
+const headingTitle = document.querySelector(".heading")
+const moreDetails = document.querySelector(".more-details")
 
 search.addEventListener("click", () => {
   const APIKey = "c1607a7ec443b5bdc23cd557e66f4dda"
   const city = document.querySelector(".search-box input").value
 
   if (city === "") {
+    container.style.height = "400px"
+    moreDetails.style.display = "none"
+    weatherBox.style.display = "none"
+    weatherDetails.style.display = "none"
+    error404.style.display = "block"
+    error404.classList.add("fadeIn")
     return
   }
 
@@ -28,6 +36,7 @@ search.addEventListener("click", () => {
 
       error404.style.display = "none"
       error404.classList.remove("fadeIn")
+      headingTitle.style.display = "none"
 
       const image = document.querySelector(".weather-box img")
       const temperature = document.querySelector(".weather-box .temperature")
@@ -76,7 +85,9 @@ search.addEventListener("click", () => {
 
       weatherBox.style.display = ""
       weatherDetails.style.display = ""
+      moreDetails.style.display = ""
       weatherBox.classList.add("fadeIn")
+      moreDetails.classList.add("fadeIn")
       weatherDetails.classList.add("fadeIn")
       container.style.height = "auto"
     })
