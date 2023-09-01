@@ -8,8 +8,9 @@
 
 body {
   height: 100vh;
-
   background-color: #06383d;
+  background-image: url("./images/bg-weather-img.jpg");
+  backdrop-filter: brightness(0.5);
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -34,8 +35,16 @@ body {
 }
 
 .heading {
-  padding: 20px;
+  padding: 20px 20px 30px 20px;
   color: #fff;
+  text-align: center;
+}
+
+.heading .top-title {
+  text-transform: capitalize;
+  font-size: 35px;
+  margin-bottom: 60px;
+  letter-spacing: 3px;
 }
 
 .search-box {
