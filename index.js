@@ -1,12 +1,14 @@
 const container = document.querySelector(".container")
-const search = document.querySelector(".search-box button")
+const searchBtn = document.querySelector(".search-box button")
 const weatherBox = document.querySelector(".weather-box")
 const weatherDetails = document.querySelector(".weather-details")
 const error404 = document.querySelector(".not-found")
 const headingTitle = document.querySelector(".heading")
 const moreDetails = document.querySelector(".more-details")
+const searchInput = document.querySelector(".search-box input")
 
-search.addEventListener("click", () => {
+// Función para realizar el fetch
+const fetchWeather = () => {
   const APIKey = "c1607a7ec443b5bdc23cd557e66f4dda"
   const city = document.querySelector(".search-box input").value
 
@@ -91,4 +93,14 @@ search.addEventListener("click", () => {
       weatherDetails.classList.add("fadeIn")
       container.style.height = "auto"
     })
+}
+
+// Add event click to button
+searchBtn.addEventListener("click", fetchWeather)
+
+// Add event enter into input
+searchInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    fetchWeather()
+  }
 })
