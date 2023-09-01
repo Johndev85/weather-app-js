@@ -7,7 +7,7 @@ const headingTitle = document.querySelector(".heading")
 const moreDetails = document.querySelector(".more-details")
 const searchInput = document.querySelector(".search-box input")
 
-// Función para realizar el fetch
+// Fetch funtion
 const fetchWeather = () => {
   const APIKey = "c1607a7ec443b5bdc23cd557e66f4dda"
   const city = document.querySelector(".search-box input").value
