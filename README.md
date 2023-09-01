@@ -36,7 +36,7 @@ cd weather-app-js
 
 ## Api - Descripcion
 
--API public The Lorem Ipsum for photos.
+-API public weather data.
 
 - [https://openweathermap.org/api](https://openweathermap.org/api)
 
