@@ -87,6 +87,7 @@ body {
   font-size: 4rem;
   font-weight: 800;
   margin-top: 30px;
+  margin-bottom: 5px;
   margin-left: -16px;
 }
 
@@ -147,6 +148,33 @@ body {
   font-weight: 500;
 }
 
+.more-details {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.more-details .inner-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.more-details .inner-container .text {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 25px;
+}
+
+.more-details .text {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
 .not-found {
   width: 100%;
   text-align: center;
@@ -174,8 +202,8 @@ body {
 }
 
 .fadeIn {
-  animation: 0.5s fadeIn forwards;
-  animation-delay: 0.5s;
+  animation: 0.2s fadeIn forwards;
+  animation-delay: 0.2s;
 }
 
 @keyframes fadeIn {

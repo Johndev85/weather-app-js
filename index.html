@@ -12,7 +12,7 @@
     <title>Weather App - JS</title>
   </head>
   <body>
-    <div class="container">
+    <section class="container">
       <div class="search-box">
         <i class="fa-solid fa-location-dot"></i>
         <input type="text" placeholder="Enter your city" />
@@ -29,6 +29,29 @@
         <p class="temperature"></p>
         <p class="description"></p>
       </div>
+
+      <section class="more-details">
+        <div class="inner-container">
+          <div class="text">
+            <span>Real Feel:</span>
+            <p class="feels-like"></p>
+          </div>
+          <div class="text">
+            <span>Temp Min:</span>
+            <p class="temp-min"></p>
+          </div>
+
+          <div class="text">
+            <span>Temp Max:</span>
+            <p class="temp-max"></p>
+          </div>
+
+          <div class="text">
+            <span>Pressure:</span>
+            <p class="pressure"></p>
+          </div>
+        </div>
+      </section>
 
       <div class="weather-details">
         <div class="humidity">
@@ -47,7 +70,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <script
       src="https://kit.fontawesome.com/7c8801c017.js"
