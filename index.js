@@ -29,6 +29,7 @@ const fetchWeather = () => {
     .then((json) => {
       if (json.cod === "404") {
         container.style.height = "400px"
+        moreDetails.style.display = "none"
         weatherBox.style.display = "none"
         weatherDetails.style.display = "none"
         error404.style.display = "block"
@@ -40,6 +41,8 @@ const fetchWeather = () => {
       error404.classList.remove("fadeIn")
       headingTitle.style.display = "none"
 
+      const cityName = document.querySelector(".city")
+      const countryName = document.querySelector(".country")
       const image = document.querySelector(".weather-box img")
       const temperature = document.querySelector(".weather-box .temperature")
       const description = document.querySelector(".weather-box .description")
@@ -74,6 +77,8 @@ const fetchWeather = () => {
           break
       }
 
+      cityName.innerHTML = `${json.name},`
+      countryName.innerHTML = `${json.sys.country}`
       temperature.innerHTML = `${parseInt(json.main.temp)}°C`
       description.innerHTML = `${json.weather[0].description}`
 
